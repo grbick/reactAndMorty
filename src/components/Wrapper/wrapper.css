@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  background-color: beige;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=wrapper.css.map */

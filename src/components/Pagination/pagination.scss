@@ -1,0 +1,17 @@
+.pagination {
+  & button {
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    background-color: green;
+    &:first-of-type {
+      background-color: red;
+    }
+  }
+  & span{
+    font-size: 24px;
+  }
+}

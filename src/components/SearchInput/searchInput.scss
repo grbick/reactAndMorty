@@ -1,0 +1,9 @@
+#div-search-input {
+  padding: 5px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  &:focus{
+   background-color: lightblue; 
+  }
+}
