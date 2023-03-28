@@ -8,7 +8,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="homePage">
-        <Header filterUrl = {this.props.filterUrl}/>
+        <Header backToHome = {this.props.backToHome} filterUrl = {this.props.filterUrl}/>
         <Wrapper
           nextPage={this.props.nextPage}
           prevPage={this.props.prevPage}

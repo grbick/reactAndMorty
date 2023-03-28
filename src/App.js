@@ -11,6 +11,7 @@ class App extends React.Component {
     this.prevPage = this.prevPage.bind(this)
     this.changeSelectedCharacter = this.changeSelectedCharacter.bind(this)
     this.filterUrl = this.filterUrl.bind(this)
+    this.backToHome = this.backToHome.bind(this)
     this.MAXPAGES = 1;
     this.state = {
       inputValue: '',
@@ -40,6 +41,9 @@ class App extends React.Component {
   filterUrl(newInputValue) {
     this.setState({ inputValue: newInputValue })
   }
+  backToHome() {
+    this.setState({ inputValue: '', pageNumber: 1, selectedCharacter: null })
+  }
   componentDidMount() {
     this.fetchData()
   }
@@ -54,8 +58,11 @@ class App extends React.Component {
     return <div className="app">
       {(this.state.selectedCharacter !== null) ?
         <CharPage
-          togglePages={this.changeSelectedCharacter} selected={this.state.selectedCharacter} /> :
-        <HomePage
+          backToHome={this.backToHome}
+          selected={this.state.selectedCharacter}
+          /> :
+          <HomePage
+          backToHome={this.backToHome}
           characters={this.state.characters}
           nextPage={this.nextPage}
           prevPage={this.prevPage}
