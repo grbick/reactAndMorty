@@ -1,0 +1,31 @@
+.selectedChar{
+    flex:1;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(115, 111, 111);
+    color: beige;
+    & img{
+        border-radius: 17px;
+    }
+    & .alive{
+        color: rgb(2, 195, 2);
+    }
+    & .dead{
+        color: rgb(255, 0, 0);
+        background-color: transparent;
+    }
+    & .unknown{
+        color: yellow;
+        background-color: transparent;
+        text-transform: capitalize;
+    }
+    & p{
+        text-transform: capitalize;
+        margin-block: 20px;
+        font-size: 1.3em;
+    }
+    
+}

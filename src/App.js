@@ -12,6 +12,7 @@ class App extends React.Component {
     this.changeSelectedCharacter = this.changeSelectedCharacter.bind(this)
     this.filterUrl = this.filterUrl.bind(this)
     this.backToHome = this.backToHome.bind(this)
+    this.goToPage = this.goToPage.bind(this)
     this.MAXPAGES = 1;
     this.state = {
       inputValue: '',
@@ -39,7 +40,7 @@ class App extends React.Component {
     this.setState({ selectedCharacter: newCharacter })
   }
   filterUrl(newInputValue) {
-    this.setState({ inputValue: newInputValue })
+    this.setState({ inputValue: newInputValue, pageNumber: 1, selectedCharacter: null })
   }
   backToHome() {
     this.setState({ inputValue: '', pageNumber: 1, selectedCharacter: null })
@@ -47,8 +48,8 @@ class App extends React.Component {
   componentDidMount() {
     this.fetchData()
   }
-  selectCharacter() {
-
+  goToPage(page) {
+    this.setState({ pageNumber: page })
   }
   componentDidUpdate(prevProps, prevState) {
     if ((prevState.pageNumber !== this.state.pageNumber) || (prevState.inputValue !== this.state.inputValue))
@@ -60,8 +61,9 @@ class App extends React.Component {
         <CharPage
           backToHome={this.backToHome}
           selected={this.state.selectedCharacter}
-          /> :
-          <HomePage
+          filterUrl={this.filterUrl}
+        /> :
+        <HomePage
           backToHome={this.backToHome}
           characters={this.state.characters}
           nextPage={this.nextPage}
@@ -69,6 +71,8 @@ class App extends React.Component {
           currentPage={this.state.pageNumber}
           changeSelectedCharacter={this.changeSelectedCharacter}
           filterUrl={this.filterUrl}
+          totalPages={this.MAXPAGES}
+          goToPage={this.goToPage}
         />}
     </div>
   }

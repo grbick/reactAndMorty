@@ -6,9 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  padding: 20px;
+  
   .cardWrapper {
     display: flex;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

@@ -8,7 +8,7 @@ class CharPage extends React.Component {
   render() {
     return (
       <div className="charPage" >
-        <Header backToHome = {this.props.backToHome}/>
+        <Header backToHome = {this.props.backToHome} filterUrl = {this.props.filterUrl}/>
         <SelectedChar selected ={this.props.selected}/>
         <Footer />
       </div>

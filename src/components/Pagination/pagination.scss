@@ -1,17 +1,20 @@
 .pagination {
-  & button {
+  display: flex;
+  align-items: center;
+  & > button {
     cursor: pointer;
-    margin: 20px;
-    padding: 10px;
-    color: white;
+    margin: 10px;
+    padding: 5px;
+    color: green;
     border: none;
-    border-radius: 20px;
-    background-color: green;
-    &:first-of-type {
-      background-color: red;
+    text-shadow: 0 2px 3px green;
+    background-color: transparent;
+    font-size: 24px;
+
+    &:first-of-type{
+      color: red;
+      text-shadow: 0 2px 3px red;
     }
   }
-  & span{
-    font-size: 24px;
-  }
+  
 }

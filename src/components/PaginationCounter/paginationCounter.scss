@@ -1,0 +1,14 @@
+.paginationCounter button{
+    background-color: transparent;
+    border: none;
+    padding: 2px;
+    margin-inline: 3px; 
+    font-size: 20px;
+    color: black;
+    text-shadow: 0 2px 3px black;
+    cursor: pointer;
+}
+.paginationCounter .selectedPage{
+    color: rgb(112, 112, 70);
+    text-shadow: 0px 2px 3px rgb(112, 112, 70);
+}

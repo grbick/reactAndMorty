@@ -15,6 +15,8 @@ class HomePage extends React.Component {
           characters={this.props.characters}
           currentPage={this.props.currentPage}
           changeSelectedCharacter={this.props.changeSelectedCharacter}
+          totalPages = {this.props.totalPages}
+          goToPage = {this.props.goToPage}
         />
         <Footer />
       </div>
